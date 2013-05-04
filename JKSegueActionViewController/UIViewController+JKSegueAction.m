@@ -1,5 +1,5 @@
 //
-//  UIViewController+SegueAction.m
+//  UIViewController+JKSegueAction.m
 //  JKSegueActionViewController
 //
 //  Created by Joseph Kain on 5/4/13.
@@ -23,13 +23,13 @@
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //    THE SOFTWARE.
 
-#import "UIViewController+SegueAction.h"
+#import "UIViewController+JKSegueAction.h"
 #import <objc/message.h>
 
 static char *JKSegueActionMapKey = "JKSegueActionMapKey";
 
 
-@implementation UIViewController (SegueAction)
+@implementation UIViewController (JKSegueAction)
 
 - (NSMutableDictionary *) map {
     NSMutableDictionary *map = objc_getAssociatedObject(self, &JKSegueActionMapKey);

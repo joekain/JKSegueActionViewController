@@ -1,5 +1,5 @@
 //
-//  UIViewController+SegueAction.h
+//  UIViewController+JKSegueAction.h
 //  JKSegueActionViewController
 //
 //  Created by Joseph Kain on 5/4/13.
@@ -26,7 +26,7 @@
 
 typedef void (^JKSegueActionBlock)(id);
 
-@interface UIViewController (SegueAction)
+@interface UIViewController (JKSegueAction)
 - (void) setActionForSegueWithIdentifier:(NSString *)identifier toBlock:(JKSegueActionBlock) block;
 - (void) performSegueWithIdentifier:(NSString *)identifier sender:(id)sender withBlock:(JKSegueActionBlock) block;
 @end

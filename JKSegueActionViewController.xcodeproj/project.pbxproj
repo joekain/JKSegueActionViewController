@@ -27,8 +27,8 @@
 		9C6AFD941734C41E00B48894 /* ViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6AFD931734C41E00B48894 /* ViewControllerTest.m */; };
 		9C6AFD9D1734FE1A00B48894 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6AFD9B1734FE0800B48894 /* Icon.png */; };
 		9C6AFD9E1734FE2200B48894 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6AFD9C1734FE0800B48894 /* Icon@2x.png */; };
-		9C7EE4B817354F9900FACB79 /* UIViewController+SegueAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7EE4B717354F9900FACB79 /* UIViewController+SegueAction.m */; };
-		9C7EE4B9173550D000FACB79 /* UIViewController+SegueAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7EE4B717354F9900FACB79 /* UIViewController+SegueAction.m */; };
+		9C7EE4B817354F9900FACB79 /* UIViewController+JKSegueAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7EE4B717354F9900FACB79 /* UIViewController+JKSegueAction.m */; };
+		9C7EE4B9173550D000FACB79 /* UIViewController+JKSegueAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7EE4B717354F9900FACB79 /* UIViewController+JKSegueAction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +81,8 @@
 		9C6AFD931734C41E00B48894 /* ViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTest.m; sourceTree = "<group>"; };
 		9C6AFD9B1734FE0800B48894 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		9C6AFD9C1734FE0800B48894 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		9C7EE4B617354F9900FACB79 /* UIViewController+SegueAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SegueAction.h"; sourceTree = "<group>"; };
-		9C7EE4B717354F9900FACB79 /* UIViewController+SegueAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SegueAction.m"; sourceTree = "<group>"; };
+		9C7EE4B617354F9900FACB79 /* UIViewController+JKSegueAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JKSegueAction.h"; sourceTree = "<group>"; };
+		9C7EE4B717354F9900FACB79 /* UIViewController+JKSegueAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JKSegueAction.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +157,8 @@
 		9C6AFD001734AB4500B48894 /* JKSegueActionViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9C7EE4B617354F9900FACB79 /* UIViewController+SegueAction.h */,
-				9C7EE4B717354F9900FACB79 /* UIViewController+SegueAction.m */,
+				9C7EE4B617354F9900FACB79 /* UIViewController+JKSegueAction.h */,
+				9C7EE4B717354F9900FACB79 /* UIViewController+JKSegueAction.m */,
 				9C6AFD011734AB4500B48894 /* Supporting Files */,
 			);
 			path = JKSegueActionViewController;
@@ -364,7 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C7EE4B817354F9900FACB79 /* UIViewController+SegueAction.m in Sources */,
+				9C7EE4B817354F9900FACB79 /* UIViewController+JKSegueAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +375,7 @@
 				9C6AFD641734B13700B48894 /* main.m in Sources */,
 				9C6AFD681734B13800B48894 /* AppDelegate.m in Sources */,
 				9C6AFD741734B13800B48894 /* ViewController.m in Sources */,
-				9C7EE4B9173550D000FACB79 /* UIViewController+SegueAction.m in Sources */,
+				9C7EE4B9173550D000FACB79 /* UIViewController+JKSegueAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

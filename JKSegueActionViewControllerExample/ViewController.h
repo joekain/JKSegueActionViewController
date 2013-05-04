@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "UIViewController+SegueAction.h"
+#import "UIViewController+JKSegueAction.h"
 
 @interface ViewController : UIViewController
 
