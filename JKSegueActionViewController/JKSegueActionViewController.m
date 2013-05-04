@@ -75,4 +75,19 @@
     segueToBlockMap[identifier] = block;
 }
 
+- (void) performSegueWithIdentifier:(NSString *)identifier sender:(id)sender withBlock:(JKSegueActionBlock) block
+{
+    JKSegueActionBlock savedBlock = segueToBlockMap[identifier];
+
+    // This isn't threadsafe but then again UIKit should only be used from the main thread so this is OK?
+    segueToBlockMap[identifier] = block;
+    [self performSegueWithIdentifier:identifier sender:sender];
+    
+    if (savedBlock) {
+        segueToBlockMap[identifier] = savedBlock;
+    } else {
+        [segueToBlockMap removeObjectForKey:identifier];
+    }
+}
+
 @end

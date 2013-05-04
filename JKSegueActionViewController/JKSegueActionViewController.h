@@ -30,4 +30,5 @@ typedef void (^JKSegueActionBlock)(UIViewController *);
 
 @interface JKSegueActionViewController : UIViewController
 - (void) setActionForSegueWithIdentifier:(NSString *)identifier toBlock:(JKSegueActionBlock) block;
+- (void) performSegueWithIdentifier:(NSString *)identifier sender:(id)sender withBlock:(JKSegueActionBlock) block;
 @end

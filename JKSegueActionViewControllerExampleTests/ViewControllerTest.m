@@ -68,4 +68,42 @@
     STAssertEquals(blockInvoked, YES, @"Block must be invoked for segue");
 }
 
+- (void)testPerformSegueWithBlockShouldInvokeBlock
+{
+    __block BOOL blockInvoked = NO;
+    __weak id weakSelf = self;
+    
+    [sut performSegueWithIdentifier:@"segueWithBlockOnPerform" sender:self withBlock:^(id sender) {
+        if (sender == weakSelf) {
+            blockInvoked = YES;
+        }
+    }];
+    STAssertEquals(blockInvoked, YES, @"Block must be invoked for performSegueWithIdentifier:sender:withBlock:");
+}
+
+- (void)testPerformSegueWithBlockShouldSetBlockTransiently
+{
+    __block BOOL blockInvoked = NO;
+    __weak id weakSelf = self;
+
+    [sut setActionForSegueWithIdentifier:@"segueWithBlockOnPerform" toBlock:^(id sender) {
+        if (sender == weakSelf) {
+            blockInvoked = YES;
+        }
+    }];
+
+    [sut performSegueWithIdentifier:@"segueWithBlockOnPerform" sender:self withBlock:^(id sender) {
+        // Do nothing
+    }];
+
+    [sut performSegueWithIdentifier:@"segueWithBlockOnPerform" sender:self];
+    STAssertEquals(blockInvoked, YES, @"Block must be invoked for performSegueWithIdentifier:sender:withBlock:");
+}
+
+- (void)testSegueWithoutActionShouldRaiseException
+{
+    STAssertNoThrow([sut performSegueWithIdentifier:@"segueWithoutAction" sender:self],
+                    @"No exception for \"segueWithoutAction\"");
+}
+
 @end
