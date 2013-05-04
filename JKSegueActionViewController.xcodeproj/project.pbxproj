@@ -28,6 +28,8 @@
 		9C6AFD881734B13800B48894 /* JKSegueActionViewControllerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6AFD871734B13800B48894 /* JKSegueActionViewControllerExampleTests.m */; };
 		9C6AFD921734C0D300B48894 /* JKSegueActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6AFD051734AB4500B48894 /* JKSegueActionViewController.m */; };
 		9C6AFD941734C41E00B48894 /* ViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6AFD931734C41E00B48894 /* ViewControllerTest.m */; };
+		9C6AFD9D1734FE1A00B48894 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6AFD9B1734FE0800B48894 /* Icon.png */; };
+		9C6AFD9E1734FE2200B48894 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6AFD9C1734FE0800B48894 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		9C6AFD861734B13800B48894 /* JKSegueActionViewControllerExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKSegueActionViewControllerExampleTests.h; sourceTree = "<group>"; };
 		9C6AFD871734B13800B48894 /* JKSegueActionViewControllerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKSegueActionViewControllerExampleTests.m; sourceTree = "<group>"; };
 		9C6AFD931734C41E00B48894 /* ViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTest.m; sourceTree = "<group>"; };
+		9C6AFD9B1734FE0800B48894 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		9C6AFD9C1734FE0800B48894 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 		9C6AFCF21734AB4500B48894 = {
 			isa = PBXGroup;
 			children = (
+				9C6AFD9B1734FE0800B48894 /* Icon.png */,
+				9C6AFD9C1734FE0800B48894 /* Icon@2x.png */,
 				9C6AFD001734AB4500B48894 /* JKSegueActionViewController */,
 				9C6AFD5D1734B13700B48894 /* JKSegueActionViewControllerExample */,
 				9C6AFD801734B13800B48894 /* JKSegueActionViewControllerExampleTests */,
@@ -310,6 +316,8 @@
 				9C6AFD6C1734B13800B48894 /* Default@2x.png in Resources */,
 				9C6AFD6E1734B13800B48894 /* Default-568h@2x.png in Resources */,
 				9C6AFD711734B13800B48894 /* MainStoryboard.storyboard in Resources */,
+				9C6AFD9D1734FE1A00B48894 /* Icon.png in Resources */,
+				9C6AFD9E1734FE2200B48894 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,6 +628,7 @@
 				9C6AFD8A1734B13800B48894 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C6AFD8E1734B13800B48894 /* Build configuration list for PBXNativeTarget "JKSegueActionViewControllerExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -628,6 +637,7 @@
 				9C6AFD8C1734B13800B48894 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
