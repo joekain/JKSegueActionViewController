@@ -26,6 +26,53 @@
 
 #import "JKSegueActionViewController.h"
 
+
+@interface JKSegueActionViewController () {
+    NSMutableDictionary *segueToBlockMap;
+}
+@end
+
 @implementation JKSegueActionViewController
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        segueToBlockMap = [[NSMutableDictionary alloc] init];
+    }
+    return self;
+}
+
+- (BOOL)hasBlockForSegue:(UIStoryboardSegue *)segue {
+    return segueToBlockMap[segue.identifier] != nil;
+}
+
+- (void)performBlockForSegue:(UIStoryboardSegue *)segue withSender:(id)sender {
+    JKSegueActionBlock block = (JKSegueActionBlock)segueToBlockMap[segue.identifier];
+    block(sender);
+}
+
+-(void)invokeSelectorForSegue:(UIStoryboardSegue *)segue withSender:(id)sender {
+    SEL selector = NSSelectorFromString(segue.identifier);
+    
+    if ([self respondsToSelector:selector]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        [self performSelector:selector withObject:segue withObject:sender];
+#pragma clang diagnostic pop
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([self hasBlockForSegue:segue]) {
+        [self performBlockForSegue:segue withSender:sender];
+    } else {
+        [self invokeSelectorForSegue:segue withSender:sender];
+    }
+}
+
+- (void) setActionForSegueWithIdentifier:(NSString *)identifier toBlock:(JKSegueActionBlock) block {
+    segueToBlockMap[identifier] = block;
+}
 
 @end

@@ -10,10 +10,6 @@
 		9C6AFCFF1734AB4500B48894 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6AFCFE1734AB4500B48894 /* Foundation.framework */; };
 		9C6AFD041734AB4500B48894 /* JKSegueActionViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9C6AFD031734AB4500B48894 /* JKSegueActionViewController.h */; };
 		9C6AFD061734AB4500B48894 /* JKSegueActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6AFD051734AB4500B48894 /* JKSegueActionViewController.m */; };
-		9C6AFD0E1734AB4500B48894 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6AFD0D1734AB4500B48894 /* SenTestingKit.framework */; };
-		9C6AFD101734AB4500B48894 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6AFD0F1734AB4500B48894 /* UIKit.framework */; };
-		9C6AFD111734AB4500B48894 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6AFCFE1734AB4500B48894 /* Foundation.framework */; };
-		9C6AFD141734AB4500B48894 /* libJKSegueActionViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6AFCFB1734AB4500B48894 /* libJKSegueActionViewController.a */; };
 		9C6AFD591734B13700B48894 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6AFD0F1734AB4500B48894 /* UIKit.framework */; };
 		9C6AFD5A1734B13700B48894 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6AFCFE1734AB4500B48894 /* Foundation.framework */; };
 		9C6AFD5C1734B13700B48894 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6AFD5B1734B13700B48894 /* CoreGraphics.framework */; };
@@ -30,16 +26,11 @@
 		9C6AFD7D1734B13800B48894 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6AFCFE1734AB4500B48894 /* Foundation.framework */; };
 		9C6AFD851734B13800B48894 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C6AFD831734B13800B48894 /* InfoPlist.strings */; };
 		9C6AFD881734B13800B48894 /* JKSegueActionViewControllerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6AFD871734B13800B48894 /* JKSegueActionViewControllerExampleTests.m */; };
+		9C6AFD921734C0D300B48894 /* JKSegueActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6AFD051734AB4500B48894 /* JKSegueActionViewController.m */; };
+		9C6AFD941734C41E00B48894 /* ViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6AFD931734C41E00B48894 /* ViewControllerTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9C6AFD121734AB4500B48894 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9C6AFCF31734AB4500B48894 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9C6AFCFA1734AB4500B48894;
-			remoteInfo = JKSegueActionViewController;
-		};
 		9C6AFD7E1734B13800B48894 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9C6AFCF31734AB4500B48894 /* Project object */;
@@ -68,7 +59,6 @@
 		9C6AFD021734AB4500B48894 /* JKSegueActionViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JKSegueActionViewController-Prefix.pch"; sourceTree = "<group>"; };
 		9C6AFD031734AB4500B48894 /* JKSegueActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKSegueActionViewController.h; sourceTree = "<group>"; };
 		9C6AFD051734AB4500B48894 /* JKSegueActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKSegueActionViewController.m; sourceTree = "<group>"; };
-		9C6AFD0C1734AB4500B48894 /* JKSegueActionViewControllerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKSegueActionViewControllerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6AFD0D1734AB4500B48894 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9C6AFD0F1734AB4500B48894 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		9C6AFD581734B13700B48894 /* JKSegueActionViewControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKSegueActionViewControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +80,7 @@
 		9C6AFD841734B13800B48894 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C6AFD861734B13800B48894 /* JKSegueActionViewControllerExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKSegueActionViewControllerExampleTests.h; sourceTree = "<group>"; };
 		9C6AFD871734B13800B48894 /* JKSegueActionViewControllerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKSegueActionViewControllerExampleTests.m; sourceTree = "<group>"; };
+		9C6AFD931734C41E00B48894 /* ViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,17 +89,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C6AFCFF1734AB4500B48894 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C6AFD081734AB4500B48894 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C6AFD0E1734AB4500B48894 /* SenTestingKit.framework in Frameworks */,
-				9C6AFD101734AB4500B48894 /* UIKit.framework in Frameworks */,
-				9C6AFD111734AB4500B48894 /* Foundation.framework in Frameworks */,
-				9C6AFD141734AB4500B48894 /* libJKSegueActionViewController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				9C6AFCFB1734AB4500B48894 /* libJKSegueActionViewController.a */,
-				9C6AFD0C1734AB4500B48894 /* JKSegueActionViewControllerTests.octest */,
 				9C6AFD581734B13700B48894 /* JKSegueActionViewControllerExample.app */,
 				9C6AFD7A1734B13800B48894 /* JKSegueActionViewControllerExampleTests.octest */,
 			);
@@ -222,6 +201,7 @@
 				9C6AFD861734B13800B48894 /* JKSegueActionViewControllerExampleTests.h */,
 				9C6AFD871734B13800B48894 /* JKSegueActionViewControllerExampleTests.m */,
 				9C6AFD811734B13800B48894 /* Supporting Files */,
+				9C6AFD931734C41E00B48894 /* ViewControllerTest.m */,
 			);
 			path = JKSegueActionViewControllerExampleTests;
 			sourceTree = "<group>";
@@ -255,25 +235,6 @@
 			productName = JKSegueActionViewController;
 			productReference = 9C6AFCFB1734AB4500B48894 /* libJKSegueActionViewController.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		9C6AFD0B1734AB4500B48894 /* JKSegueActionViewControllerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9C6AFD231734AB4500B48894 /* Build configuration list for PBXNativeTarget "JKSegueActionViewControllerTests" */;
-			buildPhases = (
-				9C6AFD071734AB4500B48894 /* Sources */,
-				9C6AFD081734AB4500B48894 /* Frameworks */,
-				9C6AFD091734AB4500B48894 /* Resources */,
-				9C6AFD0A1734AB4500B48894 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9C6AFD131734AB4500B48894 /* PBXTargetDependency */,
-			);
-			name = JKSegueActionViewControllerTests;
-			productName = JKSegueActionViewControllerTests;
-			productReference = 9C6AFD0C1734AB4500B48894 /* JKSegueActionViewControllerTests.octest */;
-			productType = "com.apple.product-type.bundle";
 		};
 		9C6AFD571734B13700B48894 /* JKSegueActionViewControllerExample */ = {
 			isa = PBXNativeTarget;
@@ -333,7 +294,6 @@
 			projectRoot = "";
 			targets = (
 				9C6AFCFA1734AB4500B48894 /* JKSegueActionViewController */,
-				9C6AFD0B1734AB4500B48894 /* JKSegueActionViewControllerTests */,
 				9C6AFD571734B13700B48894 /* JKSegueActionViewControllerExample */,
 				9C6AFD791734B13800B48894 /* JKSegueActionViewControllerExampleTests */,
 			);
@@ -341,13 +301,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9C6AFD091734AB4500B48894 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9C6AFD561734B13700B48894 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -385,19 +338,6 @@
 			shellPath = /bin/sh;
 			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
 		};
-		9C6AFD0A1734AB4500B48894 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
 		9C6AFD781734B13800B48894 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,13 +362,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C6AFD071734AB4500B48894 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9C6AFD541734B13700B48894 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -436,6 +369,7 @@
 				9C6AFD641734B13700B48894 /* main.m in Sources */,
 				9C6AFD681734B13800B48894 /* AppDelegate.m in Sources */,
 				9C6AFD741734B13800B48894 /* ViewController.m in Sources */,
+				9C6AFD921734C0D300B48894 /* JKSegueActionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,17 +378,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C6AFD881734B13800B48894 /* JKSegueActionViewControllerExampleTests.m in Sources */,
+				9C6AFD941734C41E00B48894 /* ViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9C6AFD131734AB4500B48894 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9C6AFCFA1734AB4500B48894 /* JKSegueActionViewController */;
-			targetProxy = 9C6AFD121734AB4500B48894 /* PBXContainerItemProxy */;
-		};
 		9C6AFD7F1734B13800B48894 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9C6AFD571734B13700B48894 /* JKSegueActionViewControllerExample */;
@@ -595,36 +525,6 @@
 			};
 			name = Release;
 		};
-		9C6AFD241734AB4500B48894 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JKSegueActionViewController/JKSegueActionViewController-Prefix.pch";
-				INFOPLIST_FILE = "JKSegueActionViewControllerTests/JKSegueActionViewControllerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		9C6AFD251734AB4500B48894 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "JKSegueActionViewController/JKSegueActionViewController-Prefix.pch";
-				INFOPLIST_FILE = "JKSegueActionViewControllerTests/JKSegueActionViewControllerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 		9C6AFD891734B13800B48894 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -709,15 +609,6 @@
 			buildConfigurations = (
 				9C6AFD211734AB4500B48894 /* Debug */,
 				9C6AFD221734AB4500B48894 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C6AFD231734AB4500B48894 /* Build configuration list for PBXNativeTarget "JKSegueActionViewControllerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C6AFD241734AB4500B48894 /* Debug */,
-				9C6AFD251734AB4500B48894 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

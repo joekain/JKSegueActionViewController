@@ -26,6 +26,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JKSegueActionViewController : UIViewController
+typedef void (^JKSegueActionBlock)(UIViewController *);
 
+@interface JKSegueActionViewController : UIViewController
+- (void) setActionForSegueWithIdentifier:(NSString *)identifier toBlock:(JKSegueActionBlock) block;
 @end

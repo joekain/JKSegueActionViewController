@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JKSegueActionViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : JKSegueActionViewController
+
+// test point
+@property (strong, nonatomic) NSString* state;
 
 @end

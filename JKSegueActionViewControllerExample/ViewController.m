@@ -25,22 +25,14 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
-
 @implementation ViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+- (void)actionWithSegue:(UIStoryboardSegue *)segue sender:(UIViewController *)sender {
+    self.state = @"Action";
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)secondActionWithSegue:(UIStoryboardSegue *)segue sender:(UIViewController *)sender {
+    self.state = @"Second";
 }
 
 @end
