@@ -106,4 +106,11 @@
                     @"No exception for \"segueWithoutAction\"");
 }
 
+- (void)testPerformSegueWithIdentifierSenderWorksAsUsual
+{
+    [sut performSegueWithIdentifier:@"segueWithoutAction" sender:self];
+    STAssertEqualObjects(sut.state, @"Manual", @"Segue named \"segueWithoutAction\" should set state \"Manual\"");
+
+}
+
 @end

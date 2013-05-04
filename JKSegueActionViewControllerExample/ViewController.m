@@ -27,12 +27,22 @@
 
 @implementation ViewController
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [super prepareForSegue:segue sender:sender];
+    
+    if ([segue.identifier isEqualToString:@"segueWithoutAction"]) {
+        self.state = @"Manual";
+    }
+}
 - (void)actionWithSegue:(UIStoryboardSegue *)segue sender:(UIViewController *)sender {
     self.state = @"Action";
 }
 
 - (void)secondActionWithSegue:(UIStoryboardSegue *)segue {
     self.state = @"Second";
+}
+
+    
 }
 
 @end
