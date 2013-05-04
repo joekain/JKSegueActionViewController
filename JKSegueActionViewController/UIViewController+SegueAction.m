@@ -65,6 +65,8 @@ static char *JKSegueActionMapKey = "JKSegueActionMapKey";
     }
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([self hasBlockForSegue:segue]) {
         [self performBlockForSegue:segue withSender:sender];
@@ -72,6 +74,7 @@ static char *JKSegueActionMapKey = "JKSegueActionMapKey";
         [self invokeSelectorForSegue:segue withSender:sender];
     }
 }
+#pragma clang diagnostic pop
 
 - (void) setActionForSegueWithIdentifier:(NSString *)identifier toBlock:(JKSegueActionBlock) block {
     NSMutableDictionary *map = [self map];
