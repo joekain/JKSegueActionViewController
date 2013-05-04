@@ -34,7 +34,7 @@
 // This makes it simple to attach segue actions in Interface Builder by naming the segue
 // identifier and action with the same name.
 
-- (void)actionWithSegue:(UIStoryboardSegue *)segue sender:(UIViewController *)sender {
+- (void)actionWithSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"Action for actionWithSegue:sender:");
     self.state = @"Action";
 }
