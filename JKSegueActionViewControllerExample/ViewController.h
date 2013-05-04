@@ -13,5 +13,5 @@
 
 // test point
 @property (strong, nonatomic) NSString* state;
-
+- (IBAction)done:(UIStoryboardSegue *)segue;
 @end
