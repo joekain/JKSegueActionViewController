@@ -49,7 +49,7 @@
 
 - (void)testSegueShouldInvokeSecondAction
 {
-    [sut performSegueWithIdentifier:@"secondActionWithSegue:sender:" sender:self];
+    [sut performSegueWithIdentifier:@"secondActionWithSegue:" sender:self];
     STAssertEqualObjects(sut.state, @"Second", @"Segue named \"secondActionWithSegue:sender:\" set state \"Second\"");
 }
 

@@ -31,7 +31,7 @@
     self.state = @"Action";
 }
 
-- (void)secondActionWithSegue:(UIStoryboardSegue *)segue sender:(UIViewController *)sender {
+- (void)secondActionWithSegue:(UIStoryboardSegue *)segue {
     self.state = @"Second";
 }
 

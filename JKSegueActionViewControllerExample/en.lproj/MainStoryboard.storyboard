@@ -18,7 +18,7 @@
                         <segue destination="axC-wN-7bk" kind="modal" identifier="actionWithSegue:sender:" id="K3h-Tz-NG8"/>
                         <segue destination="PZj-t3-Rd6" kind="modal" identifier="segueWithBlock" id="x5D-xF-bki"/>
                         <segue destination="g2f-2u-FUf" kind="modal" identifier="segueWithBlockOnPerform" id="Hrx-sy-ctb"/>
-                        <segue destination="kc8-h0-3Eo" kind="modal" identifier="secondActionWithSegue:sender:" id="eX1-2V-YBE"/>
+                        <segue destination="kc8-h0-3Eo" kind="modal" identifier="secondActionWithSegue:" id="eX1-2V-YBE"/>
                         <segue destination="iEv-e0-wxf" kind="modal" identifier="segueWithoutAction" id="JbZ-ZE-QmJ"/>
                     </connections>
                 </viewController>
@@ -100,6 +100,14 @@
             <point key="canvasLocation" x="555" y="943"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="JKSegueActionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JKSegueActionViewController.h"/>
+        </class>
+        <class className="ViewController" superclassName="JKSegueActionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
