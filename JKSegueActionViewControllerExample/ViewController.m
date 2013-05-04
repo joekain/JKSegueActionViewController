@@ -37,6 +37,9 @@
 - (void)actionWithSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"Action for actionWithSegue:sender:");
     self.state = @"Action";
+    
+    UIViewController *vc = segue.destinationViewController;
+    [vc.view setBackgroundColor:[UIColor grayColor]];
 }
 
 - (IBAction)onButtonActionExample:(id)sender {
@@ -53,6 +56,9 @@
 - (void)secondActionWithSegue:(UIStoryboardSegue *)segue {
     NSLog(@"Action for secondActionWithSegue:");
     self.state = @"Second";
+    
+    UIViewController *vc = segue.destinationViewController;
+    [vc.view setBackgroundColor:[UIColor cyanColor]];
 }
 
 - (IBAction)onButtonSecondActionExample:(id)sender {
@@ -69,6 +75,9 @@
 - (IBAction)onButtonBlockExample:(id)sender {
     [self setActionForSegueWithIdentifier:@"segueWithBlock" toBlock:^(UIStoryboardSegue *segue, id theSender) {
         NSLog(@"Block for segueWithBlock");
+        
+        UIViewController *vc = segue.destinationViewController;
+        [vc.view setBackgroundColor:[UIColor greenColor]];
     }];
     
     [self performSegueWithIdentifier:@"segueWithBlock" sender:self];
@@ -83,9 +92,11 @@
 // segue local and makes the whole segue easier to understand.
 
 - (IBAction)onButtonBlockOnPerformExample:(id)sender {
-    [self performSegueWithIdentifier:@"segueWithBlockOnPerform" sender:self
-                           withBlock:^(UIStoryboardSegue *segue, id theSender) {
+    [self performSegueWithIdentifier:@"segueWithBlockOnPerform" sender:self withBlock:^(UIStoryboardSegue *segue, id theSender) {
         NSLog(@"Block for segueWithBlockOnPerform");
+
+        UIViewController *vc = segue.destinationViewController;
+        [vc.view setBackgroundColor:[UIColor yellowColor]];
     }];
 }
 
@@ -102,6 +113,9 @@
     if ([segue.identifier isEqualToString:@"segueWithoutAction"]) {
         NSLog(@"prepareForSegue:sender: for segueWithoutAction");
         self.state = @"Manual";
+        
+        UIViewController *vc = segue.destinationViewController;
+        [vc.view setBackgroundColor:[UIColor magentaColor]];
     }
 }
 
