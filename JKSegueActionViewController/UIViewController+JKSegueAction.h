@@ -24,7 +24,7 @@
 //    THE SOFTWARE.
 #import <UIKit/UIKit.h>
 
-typedef void (^JKSegueActionBlock)(id);
+typedef void (^JKSegueActionBlock)(UIStoryboardSegue *, id);
 
 @interface UIViewController (JKSegueAction)
 - (void) setActionForSegueWithIdentifier:(NSString *)identifier toBlock:(JKSegueActionBlock) block;

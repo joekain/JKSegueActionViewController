@@ -58,7 +58,7 @@
     __block BOOL blockInvoked = NO;
     __weak id weakSelf = self;
 
-    [sut setActionForSegueWithIdentifier:@"segueWithBlock" toBlock:^(id sender) {
+    [sut setActionForSegueWithIdentifier:@"segueWithBlock" toBlock:^(UIStoryboardSegue *segue, id sender) {
         if (sender == weakSelf) {
             blockInvoked = YES;
         }
@@ -73,7 +73,7 @@
     __block BOOL blockInvoked = NO;
     __weak id weakSelf = self;
     
-    [sut performSegueWithIdentifier:@"segueWithBlockOnPerform" sender:self withBlock:^(id sender) {
+    [sut performSegueWithIdentifier:@"segueWithBlockOnPerform" sender:self withBlock:^(UIStoryboardSegue *segue, id sender) {
         if (sender == weakSelf) {
             blockInvoked = YES;
         }
@@ -86,13 +86,13 @@
     __block BOOL blockInvoked = NO;
     __weak id weakSelf = self;
 
-    [sut setActionForSegueWithIdentifier:@"segueWithBlockOnPerform" toBlock:^(id sender) {
+    [sut setActionForSegueWithIdentifier:@"segueWithBlockOnPerform" toBlock:^(UIStoryboardSegue *segue, id sender) {
         if (sender == weakSelf) {
             blockInvoked = YES;
         }
     }];
 
-    [sut performSegueWithIdentifier:@"segueWithBlockOnPerform" sender:self withBlock:^(id sender) {
+    [sut performSegueWithIdentifier:@"segueWithBlockOnPerform" sender:self withBlock:^(UIStoryboardSegue *segue, id sender) {
         // Do nothing
     }];
 

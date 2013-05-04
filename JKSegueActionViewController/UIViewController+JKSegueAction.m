@@ -62,7 +62,7 @@ static char *JKSegueActionMapKey = "JKSegueActionMapKey";
 
 - (void)performBlockForSegue:(UIStoryboardSegue *)segue withSender:(id)sender {
     JKSegueActionBlock block = [self blockForSegueWithIdentifier:segue.identifier];
-    block(sender);
+    block(segue, sender);
 }
 
 -(void)invokeSelectorForSegue:(UIStoryboardSegue *)segue withSender:(id)sender {

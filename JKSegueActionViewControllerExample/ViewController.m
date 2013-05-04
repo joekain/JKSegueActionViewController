@@ -67,7 +67,7 @@
 // and used on each perfomance of the segue.  The block can be set at any time (i.e. in viewDidLoad)
 
 - (IBAction)onButtonBlockExample:(id)sender {
-    [self setActionForSegueWithIdentifier:@"segueWithBlock" toBlock:^(id theSender) {
+    [self setActionForSegueWithIdentifier:@"segueWithBlock" toBlock:^(UIStoryboardSegue *segue, id theSender) {
         NSLog(@"Block for segueWithBlock");
     }];
     
@@ -83,7 +83,8 @@
 // segue local and makes the whole segue easier to understand.
 
 - (IBAction)onButtonBlockOnPerformExample:(id)sender {
-    [self performSegueWithIdentifier:@"segueWithBlockOnPerform" sender:self withBlock:^(id theSender) {
+    [self performSegueWithIdentifier:@"segueWithBlockOnPerform" sender:self
+                           withBlock:^(UIStoryboardSegue *segue, id theSender) {
         NSLog(@"Block for segueWithBlockOnPerform");
     }];
 }
@@ -97,7 +98,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     [super prepareForSegue:segue sender:sender];
-    
+
     if ([segue.identifier isEqualToString:@"segueWithoutAction"]) {
         NSLog(@"prepareForSegue:sender: for segueWithoutAction");
         self.state = @"Manual";
