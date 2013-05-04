@@ -41,16 +41,27 @@ static char *JKSegueActionMapKey = "JKSegueActionMapKey";
     return map;
 }
 
-- (BOOL)hasBlockForSegue:(UIStoryboardSegue *)segue {
+- (JKSegueActionBlock) blockForSegueWithIdentifier:(NSString *)identifier {
+    NSMutableDictionary *map = [self map];
+    return map[identifier];
+}
+
+- (void)restoreBlock:(JKSegueActionBlock)savedBlock forSegueWithIdentifier:(NSString *)identifier {
     NSMutableDictionary *map = [self map];
     
-    return map[segue.identifier] != nil;
+    if (savedBlock) {
+        map[identifier] = savedBlock;
+    } else {
+        [map removeObjectForKey:identifier];
+    }
+}
+
+- (BOOL)hasBlockForSegue:(UIStoryboardSegue *)segue {
+    return ([self blockForSegueWithIdentifier:segue.identifier] != nil);
 }
 
 - (void)performBlockForSegue:(UIStoryboardSegue *)segue withSender:(id)sender {
-    NSMutableDictionary *map = [self map];
-
-    JKSegueActionBlock block = (JKSegueActionBlock)map[segue.identifier];
+    JKSegueActionBlock block = [self blockForSegueWithIdentifier:segue.identifier];
     block(sender);
 }
 
@@ -78,24 +89,16 @@ static char *JKSegueActionMapKey = "JKSegueActionMapKey";
 
 - (void) setActionForSegueWithIdentifier:(NSString *)identifier toBlock:(JKSegueActionBlock) block {
     NSMutableDictionary *map = [self map];
-
     map[identifier] = block;
 }
 
 - (void) performSegueWithIdentifier:(NSString *)identifier sender:(id)sender withBlock:(JKSegueActionBlock) block
 {
-    NSMutableDictionary *map = [self map];
-
-    JKSegueActionBlock savedBlock = map[identifier];
+    JKSegueActionBlock savedBlock = [self blockForSegueWithIdentifier:identifier];
     
     // This isn't threadsafe but then again UIKit should only be used from the main thread so this is OK?
-    map[identifier] = block;
+    [self setActionForSegueWithIdentifier:identifier toBlock:block];
     [self performSegueWithIdentifier:identifier sender:sender];
-    
-    if (savedBlock) {
-        map[identifier] = savedBlock;
-    } else {
-        [map removeObjectForKey:identifier];
-    }
+    [self restoreBlock:savedBlock forSegueWithIdentifier:identifier];
 }
 @end
