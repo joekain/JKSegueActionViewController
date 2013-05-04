@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9C6AFCFF1734AB4500B48894 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6AFCFE1734AB4500B48894 /* Foundation.framework */; };
-		9C6AFD041734AB4500B48894 /* JKSegueActionViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9C6AFD031734AB4500B48894 /* JKSegueActionViewController.h */; };
-		9C6AFD061734AB4500B48894 /* JKSegueActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6AFD051734AB4500B48894 /* JKSegueActionViewController.m */; };
 		9C6AFD591734B13700B48894 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6AFD0F1734AB4500B48894 /* UIKit.framework */; };
 		9C6AFD5A1734B13700B48894 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6AFCFE1734AB4500B48894 /* Foundation.framework */; };
 		9C6AFD5C1734B13700B48894 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6AFD5B1734B13700B48894 /* CoreGraphics.framework */; };
@@ -26,10 +24,11 @@
 		9C6AFD7D1734B13800B48894 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6AFCFE1734AB4500B48894 /* Foundation.framework */; };
 		9C6AFD851734B13800B48894 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C6AFD831734B13800B48894 /* InfoPlist.strings */; };
 		9C6AFD881734B13800B48894 /* JKSegueActionViewControllerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6AFD871734B13800B48894 /* JKSegueActionViewControllerExampleTests.m */; };
-		9C6AFD921734C0D300B48894 /* JKSegueActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6AFD051734AB4500B48894 /* JKSegueActionViewController.m */; };
 		9C6AFD941734C41E00B48894 /* ViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6AFD931734C41E00B48894 /* ViewControllerTest.m */; };
 		9C6AFD9D1734FE1A00B48894 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6AFD9B1734FE0800B48894 /* Icon.png */; };
 		9C6AFD9E1734FE2200B48894 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C6AFD9C1734FE0800B48894 /* Icon@2x.png */; };
+		9C7EE4B817354F9900FACB79 /* UIViewController+SegueAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7EE4B717354F9900FACB79 /* UIViewController+SegueAction.m */; };
+		9C7EE4B9173550D000FACB79 /* UIViewController+SegueAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7EE4B717354F9900FACB79 /* UIViewController+SegueAction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +48,6 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				9C6AFD041734AB4500B48894 /* JKSegueActionViewController.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,8 +57,6 @@
 		9C6AFCFB1734AB4500B48894 /* libJKSegueActionViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJKSegueActionViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6AFCFE1734AB4500B48894 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C6AFD021734AB4500B48894 /* JKSegueActionViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JKSegueActionViewController-Prefix.pch"; sourceTree = "<group>"; };
-		9C6AFD031734AB4500B48894 /* JKSegueActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKSegueActionViewController.h; sourceTree = "<group>"; };
-		9C6AFD051734AB4500B48894 /* JKSegueActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKSegueActionViewController.m; sourceTree = "<group>"; };
 		9C6AFD0D1734AB4500B48894 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9C6AFD0F1734AB4500B48894 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		9C6AFD581734B13700B48894 /* JKSegueActionViewControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKSegueActionViewControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +81,8 @@
 		9C6AFD931734C41E00B48894 /* ViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTest.m; sourceTree = "<group>"; };
 		9C6AFD9B1734FE0800B48894 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		9C6AFD9C1734FE0800B48894 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		9C7EE4B617354F9900FACB79 /* UIViewController+SegueAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SegueAction.h"; sourceTree = "<group>"; };
+		9C7EE4B717354F9900FACB79 /* UIViewController+SegueAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SegueAction.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +157,8 @@
 		9C6AFD001734AB4500B48894 /* JKSegueActionViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9C6AFD031734AB4500B48894 /* JKSegueActionViewController.h */,
-				9C6AFD051734AB4500B48894 /* JKSegueActionViewController.m */,
+				9C7EE4B617354F9900FACB79 /* UIViewController+SegueAction.h */,
+				9C7EE4B717354F9900FACB79 /* UIViewController+SegueAction.m */,
 				9C6AFD011734AB4500B48894 /* Supporting Files */,
 			);
 			path = JKSegueActionViewController;
@@ -366,7 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C6AFD061734AB4500B48894 /* JKSegueActionViewController.m in Sources */,
+				9C7EE4B817354F9900FACB79 /* UIViewController+SegueAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +375,7 @@
 				9C6AFD641734B13700B48894 /* main.m in Sources */,
 				9C6AFD681734B13800B48894 /* AppDelegate.m in Sources */,
 				9C6AFD741734B13800B48894 /* ViewController.m in Sources */,
-				9C6AFD921734C0D300B48894 /* JKSegueActionViewController.m in Sources */,
+				9C7EE4B9173550D000FACB79 /* UIViewController+SegueAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

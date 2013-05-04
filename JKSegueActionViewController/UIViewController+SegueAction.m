@@ -1,9 +1,8 @@
 //
-//  JKSegueActionViewController.m
+//  UIViewController+SegueAction.m
 //  JKSegueActionViewController
 //
-//  Created by Joseph Kain on 5/3/13.
-//
+//  Created by Joseph Kain on 5/4/13.
 //  Copyright (c) 2013 Joseph Kain.
 //
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,31 +23,34 @@
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //    THE SOFTWARE.
 
-#import "JKSegueActionViewController.h"
+#import "UIViewController+SegueAction.h"
+#import <objc/message.h>
+
+static char *JKSegueActionMapKey = "JKSegueActionMapKey";
 
 
-@interface JKSegueActionViewController () {
-    NSMutableDictionary *segueToBlockMap;
-}
-@end
+@implementation UIViewController (SegueAction)
 
-@implementation JKSegueActionViewController
-
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        segueToBlockMap = [[NSMutableDictionary alloc] init];
+- (NSMutableDictionary *) map {
+    NSMutableDictionary *map = objc_getAssociatedObject(self, &JKSegueActionMapKey);
+    if (!map) {
+        map = [NSMutableDictionary dictionary];
+        objc_setAssociatedObject(self, &JKSegueActionMapKey, map, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
-    return self;
+    
+    return map;
 }
 
 - (BOOL)hasBlockForSegue:(UIStoryboardSegue *)segue {
-    return segueToBlockMap[segue.identifier] != nil;
+    NSMutableDictionary *map = [self map];
+    
+    return map[segue.identifier] != nil;
 }
 
 - (void)performBlockForSegue:(UIStoryboardSegue *)segue withSender:(id)sender {
-    JKSegueActionBlock block = (JKSegueActionBlock)segueToBlockMap[segue.identifier];
+    NSMutableDictionary *map = [self map];
+
+    JKSegueActionBlock block = (JKSegueActionBlock)map[segue.identifier];
     block(sender);
 }
 
@@ -72,22 +74,25 @@
 }
 
 - (void) setActionForSegueWithIdentifier:(NSString *)identifier toBlock:(JKSegueActionBlock) block {
-    segueToBlockMap[identifier] = block;
+    NSMutableDictionary *map = [self map];
+
+    map[identifier] = block;
 }
 
 - (void) performSegueWithIdentifier:(NSString *)identifier sender:(id)sender withBlock:(JKSegueActionBlock) block
 {
-    JKSegueActionBlock savedBlock = segueToBlockMap[identifier];
+    NSMutableDictionary *map = [self map];
 
+    JKSegueActionBlock savedBlock = map[identifier];
+    
     // This isn't threadsafe but then again UIKit should only be used from the main thread so this is OK?
-    segueToBlockMap[identifier] = block;
+    map[identifier] = block;
     [self performSegueWithIdentifier:identifier sender:sender];
     
     if (savedBlock) {
-        segueToBlockMap[identifier] = savedBlock;
+        map[identifier] = savedBlock;
     } else {
-        [segueToBlockMap removeObjectForKey:identifier];
+        [map removeObjectForKey:identifier];
     }
 }
-
 @end

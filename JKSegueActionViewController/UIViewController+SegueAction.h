@@ -1,9 +1,8 @@
 //
-//  JKSegueActionViewController.h
+//  UIViewController+SegueAction.h
 //  JKSegueActionViewController
 //
-//  Created by Joseph Kain on 5/3/13.
-//
+//  Created by Joseph Kain on 5/4/13.
 //  Copyright (c) 2013 Joseph Kain.
 //
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,12 +22,11 @@
 //    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //    THE SOFTWARE.
-
 #import <UIKit/UIKit.h>
 
 typedef void (^JKSegueActionBlock)(id);
 
-@interface JKSegueActionViewController : UIViewController
+@interface UIViewController (SegueAction)
 - (void) setActionForSegueWithIdentifier:(NSString *)identifier toBlock:(JKSegueActionBlock) block;
 - (void) performSegueWithIdentifier:(NSString *)identifier sender:(id)sender withBlock:(JKSegueActionBlock) block;
 @end
