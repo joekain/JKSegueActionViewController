@@ -26,7 +26,40 @@
 
 typedef void (^JKSegueActionBlock)(UIStoryboardSegue *, id);
 
+/** The JKSegueAction category provides additional functionality to the UIViewController class that
+ can ease the task of preparing for segues.
+*/
 @interface UIViewController (JKSegueAction)
+
+
+/** Sets a block to be used as the prepare action for a segue.
+
+ You can call this method to set a block that will be invoked to prepare the named segue when
+ it is triggered.
+
+ @param identifier The string that identifies the segue inside the storyboard file.
+ @param block A block called when the segue is triggered that can pass relevant data to the
+        new view controller.  The segue object passed to the block includes references to both view
+        controllers involved in the segue.
+*/
 - (void) setActionForSegueWithIdentifier:(NSString *)identifier toBlock:(JKSegueActionBlock) block;
+
+
+/** Initiates the segue with the sepecified identify from the view controller's storyboard file.
+
+ You can call this method to trigger and prepare a segue programmatiically.
+
+ The view controller that receives this message must have been loaded from a storyboard. If the
+ view controller does not have an associated storyboard, perhaps because you allocated and
+ initialized it yourself, this method throws an exception.
+
+ @param identifier The string that identifies the segue inside the storyboard file.
+ @param sender The object that you want to use to initiate the segue.  This object is made available
+        for informational purposes in block
+ @param block A block called when the segue is triggered that can pass relevant data to the
+        new view controller.  The segue object passed to the block includes references to both view
+        controllers involved in the segue.
+ */
+
 - (void) performSegueWithIdentifier:(NSString *)identifier sender:(id)sender withBlock:(JKSegueActionBlock) block;
 @end
