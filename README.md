@@ -27,7 +27,7 @@ Without JKSegueActionViewController you end up having to write something like th
 
 JKSegueActionViewController is for developers that find -[UIViewController prepareSegue:sender:]
 a poor tool for code organization.  JKSegueActionViewController provides a cleaner design that
-can be used to implement cleaner, easier to follow codes.
+can be used to implement easier to follow code.
 
 ### Segue Actions from Interface Builder
 
@@ -36,7 +36,7 @@ code.
 
 ![Segue in interface builder](http://www.antipodalapps.com/wp-content/uploads/2013/05/Screen-Shot-2013-05-07-at-12.34.27-AM.png)
 
-Them implement a method with the same signature used in the segue identifier:
+Then implement a method with the same signature used in the segue identifier:
 
 ```objective-c
 -(void) segueToMySceneAction:(UIStoryboardSegue *)segue sender:(id)sender {
