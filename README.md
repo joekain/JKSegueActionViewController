@@ -104,8 +104,8 @@ traditional performSegueWithIdentifier:sender.  Pass a block to prepare for your
 
 ### setActionForSegueWithIdentifier: toBlock:
 
-When you have a segue that you will perform manually you can use this method to setup a block
-to use everytime the segue is performed.
+When you have a segue that you will perform manually you can use this method to set up a block
+to use every time the segue is performed.
 
 ```objective-c
 - (void) viewDidLoad {
@@ -130,4 +130,4 @@ to use everytime the segue is performed.
 
 If you find that you want or need to use the traditional prepareForSegue:sender: you still can.  Just
 implement your own copy of prepareForSegue:sender: in all its string matching glory.  Just make sure
-to call [super prepareForSegue:sender:] otherwise you'll break JKSegueActionViewController's logic.
+to call [super prepareForSegue:sender:] otherwise you will break JKSegueActionViewController's logic.
