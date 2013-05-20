@@ -131,3 +131,7 @@ to use every time the segue is performed.
 If you find that you want or need to use the traditional prepareForSegue:sender: you still can.  Just
 implement your own copy of prepareForSegue:sender: in all its string matching glory.  Just make sure
 to call [super prepareForSegue:sender:] otherwise you will break JKSegueActionViewController's logic.
+
+# For More Information
+
+See the blog post on [JKSegueAction](http://www.antipodalapps.com/2013/05/05/jksegueaction/)
