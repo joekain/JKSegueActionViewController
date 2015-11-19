@@ -34,7 +34,7 @@ can be used to implement easier to follow code.
 First use Interface Builder to set the identifier of your segue to the method with your preparation
 code.
 
-![Segue in interface builder](http://www.antipodalapps.com/wp-content/uploads/2013/05/Screen-Shot-2013-05-07-at-12.34.27-AM.png)
+
 
 Then implement a method with the same signature used in the segue identifier:
 
